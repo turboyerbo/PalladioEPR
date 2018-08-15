@@ -1,0 +1,23 @@
+{
+  "0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d": {
+    "contracts": {
+      "0xfce1e417d62ea4b045c38ff16f6b0086d65c66572f51753bbc1cd6d83a889993": {
+        "name": "CBDContractFactory",
+        "address": "0x026cf4ecbcf2465ce2040a14f894670488812f7d"
+      },
+      "0x6527c5d9104d16637dc5d56b3627d7b59f55daf25dd1bba2c4f881d0b8f4e14d": {
+        "name": "PalladioCadToken",
+        "address": "0x5671a819e5cbd2530353902ed0aa173ce4d719e2"
+      },
+      "0xfb8c3b4f801745cf359cd1653159fcdf3d6078abbfc95597da16b52fdee45ea5": {
+        "name": "CBDContractFactory",
+        "address": "0x75bb29b53cbfa6076f5cbcb0e06a3023d20448be"
+      },
+      "0x91d1fe4e811395fd6669f9a2c93efa5e6d84deec0cb24730e637e5143309da3f": {
+        "name": "PalladioCadToken",
+        "address": "0x7a560dfd83f79807f0c3220bf69da611b2057d70"
+      }
+    },
+    "name": "testnet"
+  }
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="utf-8">
+        <title>Palladio - ESPAR</title>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/app.css">
+      
+  <script src="js/lib/embark.js"></script>
+  <script src="js/lib/jquery.js"></script>
+  <script src="js/lib/constants.js"></script>
+  <script src="js/create.js"></script>
+  </head>
+<!-- <style>
+    a.groove {border-style: groove;}
+  </style>-->
+  
+  <body class='container'><br>
+  </div>
+</div>
+  
+  <!-- Navbar -->
+  <div class="top">
+  <div class="bar red card left-align large">
+    <a class="bar-item button hide-medium hide-large right padding-large hover-white large red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="bar-item button padding-large white">Home</a>
+    <a href="addArchitect.html" class="bar-item button hide-small padding-large hover-white">Administration</a>
+    <a href="getAllCBDs.html" class="bar-item button hide-small padding-large hover-white">Consultations</a>
+    <a href="create.html" class="bar-item button hide-small padding-large hover-white">Applicant</a>
+    <a href="http://palladio.io/tools.html" class="bar-item button padding-large">How it Works</a>
+    
+  <!--  <a href="http://palladio.io/how-it-works.html" class="bar-item button hide-small padding-large hover-white">About us</a> -->
+
+  </div>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="bar-block white hide hide-large hide-medium large">
+    <a href="addArchitect.html" class="bar-item button padding-large">Administration</a>
+    <a href="getAllCBDs.html" class="bar-item button padding-large">Consultations</a>
+    <a href="create.html" class="bar-item button padding-large">Applicant</a>
+    <a href="http://palladio.io/tools.html" class="bar-item button padding-large">How it Works</a>
+  </div>
+  </div>
+<br>
+<br>
+
+
+  <h3>Applicant Form</h3><br>
+
+  <strong>Step 1</strong>
+  <br>   
+  <a target="_blank" href="https://www.toronto.ca/wp-content/uploads/2017/12/8b70-2018-Development-Approval-Application.pdf">Submit the 2018 Planning Application Form.</a
+    ><br>
+    <br>
+  <strong>Step 2</strong>
+  <br>
+  Log into your account with Metamask.  <a target="_blank" href="https://metamask.io"></img><a target="_blank" href="https://metamask.io"><img src="https://metamask.io/img/metamask.png" width="15" height="15"></a> 
+  <br>
+    <!-- Connect Architect Account from Web3 with Metamask -->
+    <select id="architectAccount" name="architectAccount">
+        <option value="0"> - Applicant - </option>
+    </select><br>
+    <br>
+     
+    <!-- Consultation Duration -->
+    <strong>Step 3</strong>
+    <br>
+  Select duration of online pre-consultation.
+  <br>
+    <div>
+      <select id='defaultTimeoutLengthInHoursInput' name='defaultTimeoutLengthInHoursInput'>
+          <option value="0">- Duration -</option>
+          <option value="1">1 hours</option>
+          <option value="2">2 hours</option>
+          <option value="3">3 hours</option>
+          <option value="4">4 hours</option>
+       </select>
+      </div>
+    
+    <br>
+
+  
+<!--Consultation Category-->         
+  <strong>Step 4</strong> 
+  <br>
+  Toronto online consultations are held weekdays at <strong>10:00am (Eastern Standard Time)</strong>.
+  <br>
+   
+<select id='category' name='category'>
+  <br>
+  <option value="0"> - Date -</option>
+  <option>09/01/2018</option>
+  <option>09/02/2018</option>
+  <option>09/03/2018</option>
+  <option>09/04/2018</option>
+  <option>09/05/2018</option>
+  <option>09/06/2018</option>
+  <option>09/07/2018</option>
+  <option>09/08/2018</option>
+  <option>09/09/2018</option>
+  <option>09/10/2018</option>
+  <option>09/11/2018</option>
+  <option>09/12/2018</option>
+  <option>09/13/2018</option>
+  <option>09/14/2018</option>
+  <option>09/15/2018</option>
+  <option>09/16/2018</option>
+  <option>09/17/2018</option>
+  <option>09/18/2018</option>
+  <option>09/20/2018</option>
+  <option>09/21/2018</option>
+  <option>09/22/2018</option>
+  <option>09/23/2018</option>
+  <option>09/24/2018</option>
+  <option>09/25/2018</option>
+  <option>09/26/2018</option>
+  <option>09/27/2018</option>
+  <option>09/28/2018</option>
+  <option>09/29/2018</option>
+  <option>09/30/2018</option>
+  <option>09/31/2018</option>
+</select>
+<br>
+<br>
+
+<!--Link to File-->      
+<strong>Step 5</strong><br>
+Include a link to PDF for review. 
+<br>
+Confidential links should be password protected.
+<br>
+<textarea type="text" placeholder='www.dropbox.com/SPA_Toronto_01A78' name="description" id='description' rows="1" cols="80"></textarea>
+<br>
+    
+    <a target="_blank" href="https://www.toronto.ca/wp-content/uploads/2017/12/867e-City-Planning-Development-Approval-Planning-Checklist.pdf">Planning Application Checklist</a>
+    <br>
+    <br>
+
+<!--Sumbit-->
+<strong>Step 6</strong>
+<br>
+<input id="onCreateCBDBtn" type='submit' value='Post Consultation' onclick="useCBDFormInput()">
+<div id='outputDiv'></div>
+
+<br>
+<br>
+  The pre-consultation fee is $130 CAD for municipalities in Ontario. 
+  <br>
+  Palladio charges at 2% service fee, which is automatically deducted from the total.
+  <br>
+  <a target="_blank" href="https://www.toronto.ca/city-government/planning-development/application-forms-fees/fees/">Research and Information Fee</a><br>
+  <br>
+
+
+    <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+    <div class="coinmarketcap-currency-widget" data-currencyid="1027" data-base="CAD"
+    data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" 
+    data-volume="false" data-stats="USD" data-statsticker="false"><br></div><br><br>
+
+
+
+   <h3> <a href='/getAllCBDs.html'>View Posted Consultations</a></h3>Note: It can take several minutes to see your post.<br><br><br>
+  
+  </body>
+
+</html>
+

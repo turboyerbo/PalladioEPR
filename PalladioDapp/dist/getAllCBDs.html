@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Palladio - ESPAR</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/app.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://wallet.metamask.io/metamascara.js"></script>
+
+    <title>Palladio - Consultation Calendar</title>
+    <script type="text/javascript" src='js/lib/embark.js'></script>
+    <script type="text/javascript" src='js/lib/jquery.js'></script>
+    <script type="text/javascript" src='js/lib/constants.js'></script>
+    <script type="text/javascript" src='js/getAllCBDs.js'></script>
+    <script type="text/javascript" src="js/tableFilter.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+      <br>
+      <div id="nav-placeholder"></div>
+      <div class="container">
+          <br><br><h2><p class=small> Electronic Site Plan Approval Review </p>
+        <div class="well" style="font-size:3.8rem">
+            <a target="_blank" href="https://metamask.io"></img><a target="_blank" href="https://metamask.io"><img src="https://en.bitcoinwiki.org/upload/en/images/thumb/e/eb/Metamask.png/400px-Metamask.png" width="100" height="37.5"></a>
+      
+      </div>
+      </div>
+        
+        <!-- Navbar -->
+        <div class="top">
+        <div class="bar red card left-align large">
+          <a class="bar-item button hide-medium hide-large right padding-large hover-white large red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+          <a href="index.html" class="bar-item button padding-large white">Home</a>
+          <a href="addArchitect.html" class="bar-item button hide-small padding-large hover-white">Administration</a>
+          <a href="getAllCBDs.html" class="bar-item button hide-small padding-large hover-white">Consultations</a>
+          <a href="create.html" class="bar-item button hide-small padding-large hover-white">Applicant</a>
+          <a href="http://palladio.io/tools.html" class="bar-item button padding-large">How it Works</a>
+          
+        <!--  <a href="http://palladio.io/how-it-works.html" class="bar-item button hide-small padding-large hover-white">About us</a> -->
+      
+        </div>
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="bar-block white hide hide-large hide-medium large">
+          <a href="index.html" class="bar-item button padding-large white">Home</a>
+          <a href="addArchitect.html" class="bar-item button padding-large">Administration</a>
+          <a href="getAllCBDs.html" class="bar-item button padding-large">Consultations</a>
+          <a href="create.html" class="bar-item button padding-large">Applicant</a>
+          <a href="http://palladio.io/tools.html" class="bar-item button padding-large">How it Works</a>
+        </div>
+        </div>
+      
+        <!-- Header -->
+        <header class="container red center" style="padding:128px 16px">
+          <h1 class="margin jumbo">PALLADIO</h1>
+          <p class="medium">Online Consultations</p>
+          <br>
+          <br>
+    
+ <!--   <input id="resetFilterButton" type="button" value="Reset Filter"><br><br>-->
+    <table color='white' border=3>
+      <thead>
+        <tr>
+          <td>
+            <select id="stateSelect">
+              <option value="All">All</option>
+              <option value="Open">Scheduled</option>
+              <option value="Committed">In Progress</option>
+              <option value="Open_Committed">Scheduled/In Progrss</option>
+              <option value="Expended">Closed</option>
+            </select>
+          </td>
+          <td>
+            Reference Number
+          </td>
+ 
+          <td><span padding='4'>Start (EST)</td></span> 
+         
+            <td><span padding='4'> Duration </span></td>
+  
+         
+          <td>Date</td>
+          <td><span cols=15>Link</span></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="mainTableRow">
+          <!-- if ($assoc['state'] == "Open") echo "<tr bgcolor='#B4E1E8'>";
+          if ($assoc['state'] == "Committed") echo "<tr bgcolor='#FF3F2E'>";
+          if ($assoc['state'] == "Expended") echo "<tr bgcolor='#aaaaaa'>"; -->
+          <td class="state">
+            
+          </td>
+          <td>
+            <br>
+           <a target='_blank' href='' class='contractAddress'></a><br>
+            <br>
+          <!--  Architect Registered Identity: <font color="#00aa00" class="licensedArchitectAddress"></font><br><br><br>
+            
+            <span class='associateArchitect'></span>
+            <a href='../layout/interact.html' class='associateArchitect'></a><font color='#5d00ff' ></font> -->
+          </td>
+          <td width='25%'>
+            <font color="#ffffff">
+              <span class="start">10:00am
+                  </span>
+          </td>
+
+          <td>
+              <font>
+                <span width="25%" class="defaultAction">                
+                </span>
+
+                        </font>
+                <span width="50%" class="autoreleaseInterval"></span>
+
+          </td>
+          <td class="recordBook" width='25%'>
+            <br>
+          </td>
+          <td><a target='_blank' src='js/getAllCBDs.js' href='#initialStatement.html' class="initialStatement" width='25%'></td>
+            <br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+      </div>
+  </body>
+</html>
