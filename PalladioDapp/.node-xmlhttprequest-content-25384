@@ -1,0 +1,1 @@
+{"err":null,"data":{"statusCode":200,"headers":{"content-type":"application/json","vary":"Origin","date":"Wed, 15 Aug 2018 09:07:02 GMT","content-length":"90","connection":"close"},"text":"{\"jsonrpc\":\"2.0\",\"id\":23288,\"result\":\"Geth/v1.8.1-stable-1e67410e/windows-amd64/go1.9.2\"}\n"}}
