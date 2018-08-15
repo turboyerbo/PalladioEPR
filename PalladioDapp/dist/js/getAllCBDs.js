@@ -59,7 +59,7 @@ function buildCBDRow(cbdObject, index){
     $(`.autoreleaseTime:eq(${index})`)
   }
   $(`.recordBook:eq(${index})`).text(cbdObject.recordBook);
-  $(`.initialStatement:eq(${index})`).text(cbdObject.initialStatement).css("color", "white");
+  $(`.initialStatement:eq(${index})`).attr("href", `getAllCBDs.html?initialStatement=${cbdObject.initialStatement}`).css("color", "white");
 }
 
 function loadContract(contractIdx, nContracts)
