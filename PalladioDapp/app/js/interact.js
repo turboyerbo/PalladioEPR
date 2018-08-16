@@ -42,6 +42,7 @@ function onError(err)
   $('#CBDTable').css("background-color", "grey");
 }
 
+
 __loadManagerInstance.execWhenReady(function() {
   //window.etherscanURL = "https://etherscan.io/address/"
   window.etherscanURL = "https://ropsten.etherscan.io/address/";
@@ -186,6 +187,14 @@ function onUserAddressesVisible(account) {
     document.getElementById('userAddress').innerHTML = "Registered Account: " + account;
 }
 
+function viewAccountOnEtherscan() {
+  document.getElementById("etherscanURL").innerHTML = "Etherscan.io";
+  document.getElementById("etherscanURL").href = "https://ropsten.etherscan.io/address/"  + address;
+  document.getElementById("etherscanURL").target = "_blank";
+}
+
+
+
 function recipientStringEditMode(flag) {
 	if (flag) {
 		$('#recipientStringUpdateStartButton').hide();
@@ -253,7 +262,7 @@ function handleCommitResult(res) {
 function callCommit() {
   //CBDContract.methods.commit().send({'value':commitAmountInWei, "from":web3.eth.defaultAccount})
 
-  PalladioCadToken.methods.commit(CBDContract.options.address).send({"from":web3.eth.defaultAccount})
+  PalladioEPRToken.methods.commit(CBDContract.options.address).send({"from":web3.eth.defaultAccount})
   .then(handleCommitResult);
 }
 function handleRecoverFundsResult(err, res) {
