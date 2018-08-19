@@ -1,18 +1,26 @@
-<!DOCTYPE html>
 <html>
   <head>
         <meta charset="utf-8">
-        <title>Palladio - ESPAR</title>
-      
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Palladio - EPR</title>
+
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/app.css">
-      
+        
+<!--scripts-->        
   <script src="js/lib/embark.js"></script>
   <script src="js/lib/jquery.js"></script>
   <script src="js/lib/constants.js"></script>
   <script src="js/create.js"></script>
+
+  <!--calendar-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
   </head>
 <!-- <style>
     a.groove {border-style: groove;}
@@ -27,24 +35,27 @@
   <div class="bar red card left-align large">
     <a class="bar-item button hide-medium hide-large right padding-large hover-white large red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="bar-item button padding-large white">Home</a>
-    <a href="addArchitect.html" class="bar-item button hide-small padding-large hover-white">Administration</a>
     <a href="getAllCBDs.html" class="bar-item button hide-small padding-large hover-white">Consultations</a>
     <a href="create.html" class="bar-item button hide-small padding-large hover-white">Applicant</a>
-    <a href="http://palladio.io/tools.html" class="bar-item button padding-large">How it Works</a>
     
   <!--  <a href="http://palladio.io/how-it-works.html" class="bar-item button hide-small padding-large hover-white">About us</a> -->
 
   </div>
   <!-- Navbar on small screens -->
   <div id="navDemo" class="bar-block white hide hide-large hide-medium large">
-    <a href="addArchitect.html" class="bar-item button padding-large">Administration</a>
     <a href="getAllCBDs.html" class="bar-item button padding-large">Consultations</a>
     <a href="create.html" class="bar-item button padding-large">Applicant</a>
-    <a href="http://palladio.io/tools.html" class="bar-item button padding-large">How it Works</a>
   </div>
   </div>
 <br>
 <br>
+
+  <!-- Header -->
+  <header class="container red center" style="padding:128px 16px">
+      <h1 class="margin jumbo">PALLADIO</h1>
+      <p class="medium">Platform for Planners and Architects</p>
+  <!--    <button href="https://github.com/turboyerbo" class="button black padding-large large margin-top">Source code</button> -->
+    </header>
 
 
   <h3>Applicant Form</h3><br>
@@ -56,7 +67,7 @@
     <br>
   <strong>Step 2</strong>
   <br>
-  Log into your account with Metamask.  <a target="_blank" href="https://metamask.io"></img><a target="_blank" href="https://metamask.io"><img src="https://metamask.io/img/metamask.png" width="15" height="15"></a> 
+  Log into your account with Metamask   <a target="_blank" href="https://metamask.io"></img><a target="_blank" href="https://metamask.io"><img src="https://metamask.io/img/metamask.png" width="15" height="15"></a> 
   <br>
     <!-- Connect Architect Account from Web3 with Metamask -->
     <select id="architectAccount" name="architectAccount">
@@ -67,7 +78,7 @@
     <!-- Consultation Duration -->
     <strong>Step 3</strong>
     <br>
-  Select duration of online pre-consultation.
+  Pre-consultation
   <br>
     <div>
       <select id='defaultTimeoutLengthInHoursInput' name='defaultTimeoutLengthInHoursInput'>
@@ -85,43 +96,9 @@
 <!--Consultation Category-->         
   <strong>Step 4</strong> 
   <br>
-  Toronto online consultations are held weekdays at <strong>10:00am (Eastern Standard Time)</strong>.
-  <br>
-   
-<select id='category' name='category'>
-  <br>
-  <option value="0"> - Date -</option>
-  <option>09/01/2018</option>
-  <option>09/02/2018</option>
-  <option>09/03/2018</option>
-  <option>09/04/2018</option>
-  <option>09/05/2018</option>
-  <option>09/06/2018</option>
-  <option>09/07/2018</option>
-  <option>09/08/2018</option>
-  <option>09/09/2018</option>
-  <option>09/10/2018</option>
-  <option>09/11/2018</option>
-  <option>09/12/2018</option>
-  <option>09/13/2018</option>
-  <option>09/14/2018</option>
-  <option>09/15/2018</option>
-  <option>09/16/2018</option>
-  <option>09/17/2018</option>
-  <option>09/18/2018</option>
-  <option>09/20/2018</option>
-  <option>09/21/2018</option>
-  <option>09/22/2018</option>
-  <option>09/23/2018</option>
-  <option>09/24/2018</option>
-  <option>09/25/2018</option>
-  <option>09/26/2018</option>
-  <option>09/27/2018</option>
-  <option>09/28/2018</option>
-  <option>09/29/2018</option>
-  <option>09/30/2018</option>
-  <option>09/31/2018</option>
-</select>
+<!--Calendar-->
+
+<input type="text" name="category" value="02/24/2019"></input>
 <br>
 <br>
 
