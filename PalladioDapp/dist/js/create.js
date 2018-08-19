@@ -8,18 +8,36 @@ function callNewCBD(valueInEth, licensedArchitect, defaultTimeoutLengthInHours, 
     var valueInWei = web3.utils.toWei(valueInEth, 'ether');
     var autoreleaseInterval = defaultTimeoutLengthInHours*60*60;
 
-    $('#onCreateCBDBtn')[0].disabled = true
+    $('#onCreateCBDBtn')[0].disabled = true;
     $("#outputDiv").html("Contract submitted to the blockchain (view Contract on Etherscan)");
     CBDContractFactory.methods.newCBDContract(autoreleaseInterval, commitRecordBook, description)
         .send({'from':licensedArchitect,'value': valueInWei})
         .then(function(result){
-            $('#onCreateCBDBtn')[0].disabled = false
+            $('#onCreateCBDBtn')[0].disabled = false;
             $("#outputDiv").html("Contract submitted successfully (updating number of live contracts)");
             return CBDContractFactory.methods.getCBDCount().call();
         }, onError).then(function(result) {
             $("#outputDiv").html("CBD Creation transaction submitted successfully. There are " + result + " available contracts");
         }, onError);
 }
+
+
+
+
+$(function calendarDate() {
+
+    var commitRecordBook = $("category").val();
+    
+    $('input[name="category"]').daterangepicker({
+      singleDatePicker: true,
+      showDropdowns: true,
+      timePicker: true,
+      minYear: 2018,
+    }, function(start, end, label) {
+      var years = moment().diff(start, 'years');
+      alert("Are you sure about this date and time?");
+    });
+  });
 
 function useCBDFormInput() {
     var valueInEth = (13 * (1 / 363));
@@ -33,9 +51,9 @@ function useCBDFormInput() {
     if (!validateAccount(architectAccount))
         return;
 
-    var commitRecordBook = $("#category").val();
+    var commitRecordBook = "calendarDate";
     if (commitRecordBook == '') {
-            alert("Which service would you like to use?");
+            alert("Choose a day");
             return;
 
     }
@@ -56,4 +74,7 @@ function useCBDFormInput() {
     callNewCBD(valueInEth, architectAccount, defaultTimeoutLengthInHours, commitRecordBook, description);
 }
 
-populateSelectWithAccounts("#architectAccount")
+populateSelectWithAccounts("#architectAccount");
+
+
+
